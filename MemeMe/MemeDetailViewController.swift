@@ -6,4 +6,18 @@
 //  Copyright (c) 2015 Jing. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+class MemeDetailViewController: UIViewController {
+    
+    var memes: Meme!
+    
+    @IBOutlet weak var imageDetailView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imageDetailView.image = memes.memedImage
+        imageDetailView.contentMode = .ScaleAspectFit
+    }
+}
